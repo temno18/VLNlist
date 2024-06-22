@@ -15,7 +15,7 @@ SecWordVault is a specialized repository featuring wordlists designed for testin
 
      **Clone Using HTTPS (recommended):**
      ```bash
-     git clone https://github.com/your-username/SecWordVault.git
+     git clone https://github.com/temno18/SecWordVault.git
      ```
 
      **Clone Using SSH (if SSH keys are set up):**
