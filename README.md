@@ -1,38 +1,59 @@
 # SecWordVault
-SecWordVault is a specialized repository with wordlists for testing SQL injection vulnerabilities related to parameters and integers.
 
+SecWordVault is a specialized repository featuring wordlists designed for testing SQL injection vulnerabilities related to parameters and integers.
 
-Tutorial: Running SQL Injection Vulnerability Tests with SecWordVault and Gobuster
+#### Tutorial: Running SQL Injection Vulnerability Tests with SecWordVault and Gobuster
 
-1. Requirements:
+1. **Requirements:**
 
-Gobuster installed on your system. If not installed, download it from Gobuster GitHub repository.
-Python installed on your system. If not installed, download it from Python.org.
-SecWordVault repository cloned or downloaded to your local machine. Ensure you have the necessary wordlists specific to SQL injection parameters and integers.
-2. Setting Up:
+   - Gobuster installed on your system. If not installed, download it from [Gobuster GitHub repository](https://github.com/OJ/gobuster).
+   - SecWordVault repository cloned or downloaded to your local machine. Ensure you have the necessary wordlists specific to SQL injection parameters and integers.
 
-Clone or download the SecWordVault repository from SecWordVault GitHub repository.
-Extract the downloaded files to a convenient location on your machine.
-3. Running Gobuster with SecWordVault:
+2. **Setting Up:**
 
-Open your terminal or command prompt.
+   - Clone or download the SecWordVault repository from [SecWordVault GitHub repository](https://github.com/your-username/SecWordVault).
 
-Navigate to the directory where Gobuster is installed or extracted.
+     **Clone Using HTTPS (recommended):**
+     ```bash
+     git clone https://github.com/your-username/SecWordVault.git
+     ```
 
-Use the following command structure to run Gobuster with SecWordVault wordlists:
+     **Clone Using SSH (if SSH keys are set up):**
+     ```bash
+     git clone git@github.com:your-username/SecWordVault.git
+     ```
 
-bash
-Copy code
-gobuster sql -u <TARGET_URL> -w <PATH_TO_WORDLIST>
-Replace <TARGET_URL> with the URL of the target website or application where you want to test for SQL injection vulnerabilities.
+     **Download ZIP:**
+     - Download and extract the ZIP archive from [SecWordVault GitHub page](https://github.com/your-username/SecWordVault/archive/refs/heads/main.zip).
 
-Replace <PATH_TO_WORDLIST> with the path to the specific SQL injection wordlist from SecWordVault included in your cloned repository. For example:
+3. **Running Gobuster with SecWordVault:**
 
-bash
-Copy code
-gobuster sql -u http://example.com -w /path/to/secwordvault/sql_injection_wordlist.txt
-4. Analyzing Results:
+   - Open your terminal or command prompt.
+   - Navigate to the directory where Gobuster is installed or extracted.
+   - Use the following command structure to run Gobuster with SecWordVault wordlists:
 
-Gobuster will begin scanning the specified URL with each payload from the SQL injection wordlist.
-Monitor the terminal for any indications of successful injections or vulnerabilities detected.
-Note down any URLs or parameters that return abnormal responses, as these may indicate potential vulnerabilities.
+     ```bash
+     gobuster sql -u <TARGET_URL> -w <PATH_TO_WORDLIST>
+     ```
+
+     Replace `<TARGET_URL>` with the URL of the target website or application where you want to test for SQL injection vulnerabilities.
+
+     Replace `<PATH_TO_WORDLIST>` with the path to the specific SQL injection wordlist from SecWordVault included in your cloned repository. For example:
+
+     ```bash
+     gobuster sql -u http://example.com -w /path/to/secwordvault/sql_injection_wordlist.txt
+     ```
+
+4. **Analyzing Results:**
+
+   - Gobuster will begin scanning the specified URL with each payload from the SQL injection wordlist.
+   - Monitor the terminal for any indications of successful injections or vulnerabilities detected.
+   - Note down any URLs or parameters that return abnormal responses, as these may indicate potential vulnerabilities.
+
+#### Contributing
+
+Feel free to contribute new wordlists or improvements to existing ones by forking this repository, making your changes, and submitting a pull request.
+
+#### License
+
+This project is licensed under the [MIT License](LICENSE).
